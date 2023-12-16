@@ -4,3 +4,30 @@ const a = 1;
 const b = 2;
 const c = a + b;
 //entonces c será number
+
+//Functions
+//Tipado de parámetros
+function saludar(name: string) {
+  console.log(`Hola ${name}`);
+}
+
+// saludar("Fede")
+
+// function presentarse({name,age}: {name:string, age:number}){
+function presentarse(Persona: { name: string; age: number }): void {
+  const { name, age } = Persona;
+  console.log(`Hola soy ${name}, tengo ${age} años`);
+}
+presentarse({ name: "Pepe", age: 5 });
+
+//tipado de Callbacks
+
+const sayHiFromFunction = (fn: (name: string) => void) => {
+  fn("Miguel");
+};
+
+const sayHi = (name: string) => {
+  console.log(`Hola ${name}`);
+};
+
+sayHiFromFunction(sayHi);

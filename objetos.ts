@@ -140,13 +140,24 @@
 
 // ----- TYPE FROM VALUE -----
 
-const address = {
-  planet: "Earth",
-  city: "Nqn",
-};
-type Address = typeof address;
+// const address = {
+//   planet: "Earth",
+//   city: "Nqn",
+// };
+// type Address = typeof address;
 
-const personalAddress: Address = {
-  planet: "Earth",
-  city: "Gotham",
-};
+// const personalAddress: Address = {
+//   planet: "Earth",
+//   city: "Gotham",
+// };
+
+//----- TYPE FROM FUNCTION RETURN -----
+
+// function createAddress() {
+//   return {
+//     planet: "Tierra",
+//     city: "Nqn",
+//   };
+// }
+
+// type Address = ReturnType<typeof createAddress>;

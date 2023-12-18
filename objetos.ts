@@ -92,13 +92,18 @@
 type HeroId = `${string}-${string}-${string}-${string}-${string}`;
 type heroPowerScale = "low" | "medium" | "high";
 
-type Hero = {
-  readonly id?: HeroId;
+type HeroBasicInfo = {
   name: string;
   age: number;
+};
+
+type HeroProperties = {
+  readonly id?: HeroId;
   isActive?: boolean;
   powerScale?: heroPowerScale;
 };
+
+type Hero = HeroBasicInfo & HeroProperties;
 
 let hero: Hero = {
   name: "Thor",
@@ -108,8 +113,8 @@ let hero: Hero = {
 /**
  * Devuelve un Hero
  */
-function createHero(hero: Hero): Hero {
-  const { name, age } = hero;
+function createHero(input: HeroBasicInfo): Hero {
+  const { name, age } = input;
   const id = crypto.randomUUID();
   return { id, name, age, isActive: true };
 }

@@ -161,3 +161,48 @@
 // }
 
 // type Address = ReturnType<typeof createAddress>;
+
+// ----- ARRAYS -----
+//Formas de tipar los arrays
+// const languages: Array<string> = []
+// const languages: string[] = [];
+// const languages: (string | number)[] = [];
+
+// languages.push("JavaScript");
+// languages.push("JavaScript");
+// languages.push("JavaScript");
+// languages.push("JavaScript");
+// languages.push(2);
+
+// un Arreglo de objetos
+// type HeroBasicInfo = {
+//   id?: number
+//   name: string
+//   age:number
+// }
+
+// const heros : HeroBasicInfo[] = []
+
+// [
+//   ["X","O","X"],
+//   ["O","X","O"],
+//   ["X","","O"]
+// ]
+
+type CellValue = "X" | "O" | "";
+
+type GameBoard = [
+  [CellValue, CellValue, CellValue],
+  [CellValue, CellValue, CellValue],
+  [CellValue, CellValue, CellValue]
+];
+
+const gameBoard: CellValue[][] = [
+  ["X", "O", "X"],
+  ["O", "X", "O"],
+  ["X", "", "O"],
+];
+
+type RGB = [number, number, number];
+
+const rgb: RGB = [2, 4, 255];

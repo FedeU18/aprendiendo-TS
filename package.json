@@ -8,7 +8,9 @@
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
-    "run:aprendiendo": "ts-node objetos.ts",
+    "run:enums": "ts-node enums.ts",
+    "run:objetos": "ts-node objetos.ts",
+    "run:aprendiendo": "ts-node aprendiendo.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

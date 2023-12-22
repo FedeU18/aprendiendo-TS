@@ -189,6 +189,8 @@
 //   ["X","","O"]
 // ]
 
+// TUPLAS
+
 type CellValue = "X" | "O" | "";
 
 type GameBoard = [
@@ -197,7 +199,7 @@ type GameBoard = [
   [CellValue, CellValue, CellValue]
 ];
 
-const gameBoard: CellValue[][] = [
+const gameBoard: GameBoard = [
   ["X", "O", "X"],
   ["O", "X", "O"],
   ["X", "", "O"],
@@ -206,3 +208,7 @@ const gameBoard: CellValue[][] = [
 type RGB = [number, number, number];
 
 const rgb: RGB = [2, 4, 255];
+
+//PROBLEMA CON LAS TUPLAS, SON MUTABLES
+
+rgb.push(123);

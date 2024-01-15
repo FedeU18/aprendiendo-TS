@@ -28,10 +28,11 @@ function mostrarMensaje(dia: DIAS) {
 }
 console.log(mostrarMensaje(0));
 
-enum ERROR_TYPES {
-  NOT_FOUND,
-  UNAUTHORIZED,
-  FORBIDDEN,
+// Utilizar const no genera código de más
+const enum ERROR_TYPES {
+  NOT_FOUND, //0
+  UNAUTHORIZED, //1
+  FORBIDDEN, //2
 }
 
 function mostrarMensajeDeError(tipoDeError: ERROR_TYPES) {
